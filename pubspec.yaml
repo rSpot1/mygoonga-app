@@ -1,0 +1,75 @@
+name: mygoonga
+description: MyGoonga - verification collaborative de medias et d'evenements locaux.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Firebase
+  firebase_core: ^3.6.0
+  firebase_auth: ^5.3.1
+  google_sign_in: ^6.2.1
+
+  # Reseau
+  dio: ^5.7.0
+
+  # Etat
+  provider: ^6.1.2
+
+  # Partage natif (share intent)
+  receive_sharing_intent: 1.8.1
+
+  # Selection de fichiers
+  image_picker: ^1.1.2
+  file_picker: ^8.1.2
+
+  # Geolocalisation
+  geolocator: ^13.0.1
+
+  # Utilitaires UI
+  intl: ^0.20.2
+  cached_network_image: ^3.4.1
+  photo_view: ^0.15.0
+  shimmer: ^3.0.0
+  google_fonts: ^6.2.1
+
+  # Stockage local leger (token cache, preferences)
+  shared_preferences: ^2.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  # Generation de l'ecran de demarrage natif (avant que Flutter demarre), pour que
+  # le fond soit deja teal (couleur de marque) au lieu du blanc par defaut du systeme.
+  # Voir README, section "Splash screen natif" pour la commande a lancer.
+  flutter_native_splash: ^2.4.3
+
+flutter:
+  uses-material-design: true
+  # Active la generation des traductions (voir lib/l10n/*.arb + l10n.yaml).
+  generate: true
+  assets:
+    - assets/icons/
+
+# Configuration de l'ecran de demarrage natif (genere via
+# `dart run flutter_native_splash:create`, voir README).
+flutter_native_splash:
+  color: "#0E7C7B"
+  color_dark: "#0E1621"
+  # Remplacez par votre propre logo une fois disponible dans assets/icons/
+  # (image carree, fond transparent recommande) ; sans image, seul le fond
+  # colore est applique nativement, ce qui evite deja l'ecran blanc.
+  image: assets/icons/splash_logo.png
+  android_12:
+    color: "#0E7C7B"
+    color_dark: "#0E1621"
+    image: assets/icons/splash_logo.png

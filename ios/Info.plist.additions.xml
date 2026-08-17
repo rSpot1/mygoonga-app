@@ -1,0 +1,13 @@
+<!--
+Copiez les balises ci-dessous dans ios/Runner/Info.plist, entre les balises
+<dict> ... </dict> existantes, une fois `flutter create --platforms=ios .` exécuté
+(voir SETUP_IOS.md).
+-->
+<key>NSCameraUsageDescription</key>
+<string>MyGoonga a besoin de l'appareil photo pour prendre une photo à analyser ou pour votre demande de statut vérificateur.</string>
+
+<key>NSPhotoLibraryUsageDescription</key>
+<string>MyGoonga a besoin d'accéder à vos photos pour choisir un média à analyser.</string>
+
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>MyGoonga utilise votre position pour afficher les événements locaux signalés à proximité.</string>
