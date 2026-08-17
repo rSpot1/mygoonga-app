@@ -2,11 +2,7 @@
 
 Client mobile de MyGoonga : vérification collaborative de médias et d'événements
 locaux. Cette application consomme l'API FastAPI livrée séparément (dossier
-`mygoonga-api`) — elle ne parle jamais directement à Firestore ou Firebase Storage.
-
-Design : sobre et professionnel, inspiré de la clarté de Telegram et WhatsApp
-(bulles de statut, listes denses, icônes plutôt que texte pour les indications
-d'état), sans aucun emoji. Toutes les icônes proviennent de Material Icons.
+`mygoonga-api`)
 
 ---
 
@@ -180,12 +176,4 @@ serveur, l'UI ne fait que refléter ce que l'utilisateur peut faire :
   (compte développeur Apple requis pour publier sur l'App Store).
 - Recompilez toujours avec `--dart-define=API_BASE_URL=<url de production>`.
 
-## 9. Limites connues de ce MVP côté client
 
-- Pas de carte interactive pour les événements locaux (liste uniquement) — une
-  vue carte est une extension naturelle listée dans la roadmap du cahier des
-  charges.
-- Le partage entrant iOS demande une configuration manuelle dans Xcode (limite
-  de la plateforme, pas du code fourni — voir section 5).
-- Pas encore de notifications push (Firebase Cloud Messaging) : les décisions de
-  modération sont visibles au prochain rafraîchissement du profil, pas en temps réel.
